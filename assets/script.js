@@ -1,7 +1,7 @@
 var city = document.querySelector('.XX');
 
 var tempCurrent = document.querySelector('#XX')
-var humidityCurrent = document.querySelector('#hXX')
+var humidityCurrent = document.querySelector('#XX')
 var windCurrent = document.querySelector('#XX');
 
 var tempForecast = document.querySelector('.XX');
