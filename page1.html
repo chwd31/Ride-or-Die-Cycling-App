@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <Meta name=" viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Ride or Die Travel App</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     </head>
 
     <body>
@@ -15,12 +16,39 @@
         <button>FAQ</button>
       </div>  
 
-      <div class="hero">
-      </div>
+      <section class="hero is-success">
+        <div class="hero-body">
+          <p class="title">
+            Hero title
+          </p>
+          <p class="subtitle">
+            Hero subtitle
+          </p>
+        </div>
+      </section>
 
-      <div class="contents">
-        <div id="Location_box" class="flexbox"></div>
-        <div id="Weather_box" class="flexbot"></div>
+      <div class="container is-fluid" id="contents">
+        <form class="box-background-color red">
+          <div class="field" id="Weather_box">
+            <label class="label">Weather Location</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="San Diego">
+            </div>
+          </div>
+          <button class="button is-primary">Submit</button>
+        </form>
+
+        <form class="box">
+          <div class="field" id="Location_box">
+            <label class="label">Bike Sharing Locations</label>
+             <div class="control">
+               <input class="input" type="text" placeholder="San Diego">
+            </div>
+          </div>
+           <button class="button is-primary">Submit</button>
+        </form>
+
+        
         <div id="submitBtn">
             <button>Submit</button>
         </div>
@@ -29,8 +57,15 @@
         </div>
       </div>
 
-      <div class="footer"></div>
+      <footer class="footer">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Ride Or Die Cyling App</strong> by <a href="">Group 1</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
 
     </body>
-  <script src="assets\page1.js" rel="scriptsheet"></script>
 </html>    
