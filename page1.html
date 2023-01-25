@@ -28,16 +28,22 @@
       </section>
 
       <div class="container is-fluid" id="contents">
-        <form class="box-background-color red">
+        <!-- Input box for Weather Location -->
+        <form class="box">
           <div class="field" id="Weather_box">
             <label class="label">Weather Location</label>
             <div class="control">
               <input class="input" type="text" placeholder="San Diego">
             </div>
           </div>
-          <button class="button is-primary">Submit</button>
+          <button class="button is-primary" id="WeatherBtn">Submit</button>
         </form>
+        <!-- Empty box for weather display -->
+        <div class="box">
+          I'm in a box.
+        </div>
 
+        <!-- Bike Sharing Location Input box -->
         <form class="box">
           <div class="field" id="Location_box">
             <label class="label">Bike Sharing Locations</label>
@@ -45,15 +51,21 @@
                <input class="input" type="text" placeholder="San Diego">
             </div>
           </div>
-           <button class="button is-primary">Submit</button>
+           <button class="button is-primary" id="ShareBtn">Submit</button>
         </form>
+        <!-- Empty box for bike sharing location displays -->
+        <div class="box">
+          I'm in a box.
+        </div>
 
         
         <div id="submitBtn">
             <button>Submit</button>
         </div>
         <div id="BikingFAQ" class="Btn">
+          <a href="faq.html" >
             <button>Biking FAQ</button>
+          </a>
         </div>
       </div>
 
@@ -67,6 +79,6 @@
         </div>
       </footer>
 
-        <script src="assets\script.js" rel="weather-script"></script> </script>
+      <script src="assets\script.js" rel="weather-script"></script> </script>
     </body>
 </html>    
