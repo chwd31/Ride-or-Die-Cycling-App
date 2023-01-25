@@ -1,24 +1,26 @@
-var city = document.querySelector('.XX');
+// city variable
+var city = document.querySelector('.city-name');
+// current weather variables
+var tempCurrent = document.querySelector('#temp-current')
+var humidityCurrent = document.querySelector('#humid-current')
+var windCurrent = document.querySelector('#wind-current');
+var visibilityCurrent = document.querySelector('#visibility-current');
 
-var tempCurrent = document.querySelector('#XX')
-var humidityCurrent = document.querySelector('#XX')
-var windCurrent = document.querySelector('#XX');
+// Forecast variables
+var tempForecast = document.querySelector('#temp-forecast')
+var humidityForecast = document.querySelector('#humid-forecast')
+var windForecast = document.querySelector('#wind-forecast');
+var visibilityForecast = document.querySelector('#visibility-forecast');
 
-var tempForecast = document.querySelector('.XX');
-var humidityForecast = document.querySelector('.XX');
-var windForecast = document.querySelector('.XX');
-
-var cityInputWeather = document.querySelector('.XX');
+// city input variable for weather api
+var cityInputWeather = document.querySelector('.city-input-weather');
 
 var cityNameHistory = []; // array
+// wethaer api key 
+var WeatherKey = "c171672f4bbc8048bf259a3ea61decb1";
 
-var bikeVariableOne = document.querySelector('.XX');
-var bikeVariableTwo = document.querySelector('.XX');
-var bikeVariableThree = document.querySelector('.XX');
-
-var apiKey = "XX";
-
-const searchButtonWeather = document.querySelector('#XX')
+// event listener to search button for weather in city
+const searchButtonWeather = document.querySelector('#weather-button')
 searchButtonWeather.addEventListener('click,' function () {
     var cityWeather = cityInputWeather;
     cityDataWeather(cityWeather);
@@ -31,6 +33,7 @@ function displayCurrentWeatherData(currentWeatherData) {
     tempCurrent.innerHTML = currentWeatherData.main.temp + " " + "°F"
     humidityCurrent.innerHTML = currentWeatherData.main.humidity + "%"
     windCurrent.innerHTML = currentWeatherData.wind.speed + " " + "mph"
+    visibilityCurrent.innerHTML = currentWeatherData.sys.visibility + " "
     localStorage.setItem("cityInput", currentWeatherData);
     console.log(currentWeatherData);
 }
