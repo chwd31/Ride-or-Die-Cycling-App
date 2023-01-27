@@ -15,17 +15,16 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Navigate to "Enter URL" to use the website.  No further installation is necessary.  
+
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Enter your travel destination in the search box and submit your search.  Your search results will return the weather forecast and bike sharing locations in your destination city.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+The Bike FAQ will give the user helpful tips on biking safety in different scenerios.  Visit this page for additional information. 
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+Below are some screenshots of what the site looks like. -insert screenshots-
 
 ## Credits
 
