@@ -81,7 +81,7 @@ function currentWeatherData() {
                 localStorage.setItem("windMph", data.wind.speed)
                 localStorage.setItem("humidity", data.main.humidity)
                 localStorage.setItem("visibility", data.visibility)
-                localStorage.setItem("cityNameEl", data.main.humidity)
+                localStorage.setItem("cityName", cityInputValue)
                 
          })
             
