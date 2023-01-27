@@ -28,6 +28,13 @@ Below are some screenshots of what the site looks like. -insert screenshots-
 
 ## Credits
 
+Contributors to this project are:  
+Bailey [GitHub](https://github.com/skyeflier)  
+Chad [GitHub](https://github.com/chwd31)  
+Cole [GitHub](https://github.com/colearrington98)   
+Jemilah [GitHub](https://github.com/2x997JL)   
+Karim [GitHub](https://github.com/KarimB101)  
+
 List your collaborators, if any, with links to their GitHub profiles.
 
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
