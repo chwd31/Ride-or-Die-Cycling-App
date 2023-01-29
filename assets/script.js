@@ -101,3 +101,5 @@ WeatherBtn.addEventListener('click', function (event) {
 //     localStorage.setItem("XX", bikeData);
 //     console.log(bikeData);
 // }
+
+
