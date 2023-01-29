@@ -1,27 +1,70 @@
+var submitButton = document.querySelector('#WeatherBtn')
+var cityInputEl = document.querySelector('#city-input')
+var bikeShareList = document.querySelector('#bike-share-list')
 
-function getApi() {
-    var requestURL= "https://openweathermap.org/forecast5"
+// holds all bike networks from api
+var allBikeNetworks = null;
 
-    fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
+function fetchAllBikeSharingNetworks() {
+  let url = 'http://api.citybik.es/v2/networks'
+
+  fetch(url)
+    .then(resp => resp.json())
     .then(function (data) {
-      //looping over the fetch response and inserting the URL of your repos into a list
-      for (var i = 0; i < data.length; i++) {
-        //Create a list element
-        var listItem = document.createElement('li');
-
-        //Set the text of the list element to the JSON response's .html_url property
-        listItem.textContent = data[i].html_url;
-
-        //Append the li element to the id associated with the ul element.
-        repoList.appendChild(listItem);
-      }
-    });
-
-    
+      allBikeNetworks = data.networks;
+    })
 }
 
-console.log(requestURL)
+fetchAllBikeSharingNetworks(); // called when pages loads
+
+// Attached the event listener to same button as weather, hoping to 
+// cut two search tabs, works but still need to display data
+submitButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  var location = cityInputEl.value
+  fetchBikeSharingInformation(location);
+});
+
+// called when submit button is clicked
+function fetchBikeSharingInformation(location) {
+
+  const bikeNetworksAtLocation = allBikeNetworks.filter((network) => {
+    const city = network.location.city.toLowerCase();
+    const name = network.name.toLowerCase();
+    const lowerCaseLocation = location.toLowerCase();
+    return city.includes(lowerCaseLocation) || name.includes(lowerCaseLocation);
+  });
+
+  console.log({ bikeNetworksAtLocation })
+
+  bikeShareList.innerHTML = ""; // clear bike list
+
+  // filling the bike list on the page...
+  bikeNetworksAtLocation.forEach((network) => {
+    // for each network, make an api call to get more details... (station info)
+    let url = `http://api.citybik.es/v2/networks/${network.id}`
+    fetch(url)
+      .then(resp => resp.json())
+      .then((data) => {
+        const stations = data.network.stations.slice(0, 10); // 10 stations
+        console.log(stations);
+
+        const li = document.createElement("li");
+        li.innerHTML = `<h4>${network.name}</h4>`;
+
+        const stationsList = document.createElement("ul");
+
+        stations.forEach(station => {
+          const stationLi = document.createElement("li")
+          stationLi.innerHTML = `${station.extra.address || station.name} - ${station.free_bikes} available bike(s)`;
+          stationsList.appendChild(stationLi);
+        })
+
+        li.appendChild(stationsList);
+
+        bikeShareList.appendChild(li);
+      })
+  })
+
+}
 
