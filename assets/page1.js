@@ -6,7 +6,7 @@ var bikeShareList = document.querySelector('#bike-share-list')
 var allBikeNetworks = null;
 
 function fetchAllBikeSharingNetworks() {
-  let url = 'http://api.citybik.es/v2/networks'
+  let url = 'https://api.citybik.es/v2/networks'
 
   fetch(url)
     .then(resp => resp.json())
@@ -42,7 +42,7 @@ function fetchBikeSharingInformation(location) {
   // filling the bike list on the page...
   bikeNetworksAtLocation.forEach((network) => {
     // for each network, make an api call to get more details... (station info)
-    let url = `http://api.citybik.es/v2/networks/${network.id}`
+    let url = `https://api.citybik.es/v2/networks/${network.id}`
     fetch(url)
       .then(resp => resp.json())
       .then((data) => {

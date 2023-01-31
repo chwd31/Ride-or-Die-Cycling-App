@@ -27,7 +27,7 @@ weatherSubmitButton.addEventListener('click', function (event) {
 
 function fetchWeather(location) {
 
-    var currentWeatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=c171672f4bbc8048bf259a3ea61decb1&units=imperial`;
+    var currentWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=c171672f4bbc8048bf259a3ea61decb1&units=imperial`;
 
     fetch(currentWeatherURL)
         .then(response => response.json())
@@ -43,7 +43,7 @@ function fetchWeather(location) {
             // console.log(currentWeatherData);
         });
 
-    var fiveDayForecastURL = `http://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=c171672f4bbc8048bf259a3ea61decb1&units=imperial`;
+    var fiveDayForecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=c171672f4bbc8048bf259a3ea61decb1&units=imperial`;
 
     fetch(fiveDayForecastURL)
         .then(response => response.json())
@@ -90,7 +90,7 @@ var WeatherKey = "c171672f4bbc8048bf259a3ea61decb1";
 
 // API Function for City
 function CityData() {
-    var currentWeatherURL = "http://api.openweathermap.org/geo/1.0/direct?q=c171672f4bbc8048bf259a3ea61decb1"
+    var currentWeatherURL = "https://api.openweathermap.org/geo/1.0/direct?q=c171672f4bbc8048bf259a3ea61decb1"
     function currentWeatherData() {
         var currentWindEl = document.createElement('p')
         var currentHumidityEl = document.createElement('p')
