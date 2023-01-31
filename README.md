@@ -3,15 +3,38 @@
 ## Description
 This website is a resource for frequent travelers who love to explore cities on two wheels. The motivation behind creating this website came from a desire to support bikers traveling to new cities find shared biking resources. At the same time, we want to help them come prepared for the climate of their next destination to ride safely.  
 
+## Challenges we faced include: 
+- Finding a bike API that showed desired data
+- Learning how to use Bulma as a design, especially the accordion for FAQ Page
+- Figuring out how to utilize GitHub branches properly
+- Figuring out that the bike API has limited data
+
+## Successes we are proud of include: 
+- Organizing the dates for the WeatherAPI
+- Collaborating as a team to get everything done from brainstorm to finish
+- Avoided merging issues (knock on wood!)
+
 ## Table of Contents 
 
 If your README is long, add a table of contents to make it easy for users to find what they need.
 
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Future Development](#future-development)
 
+## User story
+- AS AN avid bike rider who travels regularly to cities for business,
+- I WANT to be able to find community bikes programs and know the weather conditions in the city
+- SO THAT I can continue biking safely while traveling
+
+## Acceptance Criteria:
+- GIVEN a new location (user need)
+- WHEN I visit the site (user input)
+- THEN I get the weather forecast & bike sharing locations (site output)
 
 ## Installation
 
@@ -37,34 +60,17 @@ Karim [GitHub](https://github.com/KarimB101)
 
 Third-Party APIs used for the completion of the project:   
   
- Open Weather API [link](https://openweathermap.org/api)  
+Open Weather API [link](https://openweathermap.org/api)  
   
-
-If you followed tutorials, include links to those here as well.
 
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)   
 
-
-
 ---
 
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+## Future Development
+For future iterations of this website, we would improve it by adding:
+- Add weather icons and imagery
+- Find a bike API that has more thorough database of bike sharing locations. Our current one is limited in the data it has. 
+- Test out another css framework to add accorians to FAQ page
