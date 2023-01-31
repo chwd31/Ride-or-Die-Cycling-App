@@ -16,13 +16,13 @@ var day3Wind = document.getElementById("day-3-wind");
 var day3Humidity = document.getElementById("day-3-humidity");
 
 import * as dateFns from 'https://esm.run/date-fns';
-var { startOfTomorrow, addDays } = dateFns;
+const { startOfTomorrow, addDays } = dateFns;
 
 // 2. Setup an event listener
 weatherSubmitButton.addEventListener('click', function (event) {
     // code that we want to run when the button is clicked...
     event.preventDefault(); // prevent refresh
-    console.log(weatherInput.value); // printing the content of the box
+    console.log(weatherInput.value);
     console.log("Fetching weather info...");
     fetchWeather(weatherInput.value);
 });
@@ -53,17 +53,17 @@ function fetchWeather(location) {
         .then(data => {
 
             // Create object that stores all 3-hour forecasts
-            var allForecasts = {};
+            const allForecasts = {};
             data.list.map((threeHourForecast) => {
-                var date = new Date(threeHourForecast.dt * 1000);
+                const date = new Date(threeHourForecast.dt * 1000);
                 allForecasts[date] = threeHourForecast;
             });
 
 
             // Grab 
-            var day1 = allForecasts[startOfTomorrow()];
-            var day2 = allForecasts[addDays(startOfTomorrow(), 1)];
-            var day3 = allForecasts[addDays(startOfTomorrow(), 2)];
+            const day1 = allForecasts[startOfTomorrow()];
+            const day2 = allForecasts[addDays(startOfTomorrow(), 1)];
+            const day3 = allForecasts[addDays(startOfTomorrow(), 2)];
 
             day1Temp.innerHTML = day1.main.temp;
             day1Humidity.innerHTML = day1.main.humidity;
@@ -80,11 +80,14 @@ function fetchWeather(location) {
     return "Weather info";
 }
 
+
+
+
 var cityNameHistory = []; // array
 var WeatherKey = "c171672f4bbc8048bf259a3ea61decb1";
 
 // event listener to search button for weather in city
-// var searchButtonWeather = document.querySelector('#weather-button')
+// const searchButtonWeather = document.querySelector('#weather-button')
 // searchButtonWeather.addEventListener('click,' function () {
 //     var cityWeather = cityInputWeather;
 //     cityDataWeather(cityWeather);
@@ -140,7 +143,7 @@ function CityData() {
 //     console.log(weatherData);
 // }
 
-// var searchButtonBike = document.querySelector('#XX')
+// const searchButtonBike = document.querySelector('#XX')
 // searchButtonBike.addEventListener('click,' function () {
 //     var cityBike = cityInputBike;
 //     cityDataBike(cityBike);
@@ -157,3 +160,5 @@ function CityData() {
 //     localStorage.setItem("XX", bikeData);
 //     console.log(bikeData);
 // }
+
+
