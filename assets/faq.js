@@ -52,5 +52,3 @@ closeButton4.addEventListener('click', function () {
 closeButton5.addEventListener('click', function () {
     modal5.classList.remove('is-active');
 });
-
-.
