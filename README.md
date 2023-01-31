@@ -39,9 +39,11 @@ This website is a resource for frequent travelers who love to explore cities on 
 Navigate to [Ride or Die Cycling App](https://chwd31.github.io/Ride-or-Die-Cycling-App/) to use the website.  No further installation is necessary.  
 
 
-## Usage.  
+## Usage  
   
-![Screenshot 2023-01-31 at 11 35 06 AM](https://user-images.githubusercontent.com/118683737/215838932-7a98da13-a77c-4260-9ef2-b5f7230cb8e1.png)  
+![Screenshot 2023-01-31 at 3 56 42 PM](https://user-images.githubusercontent.com/118683737/215892987-2a7a6069-0761-4f38-b0e5-aae4ddacba88.png)
+![Screenshot 2023-01-31 at 3 57 11 PM](https://user-images.githubusercontent.com/118683737/215893068-8a64eac1-16df-45d4-a7a0-b0af64d0c326.png)
+
 
 Enter your travel destination in the search box and submit your search.  Your search results will return the weather forecast and bike sharing locations in your destination city.
 
