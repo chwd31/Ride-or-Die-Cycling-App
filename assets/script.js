@@ -15,9 +15,6 @@ var day3Temp = document.getElementById("day-3-temp");
 var day3Wind = document.getElementById("day-3-wind");
 var day3Humidity = document.getElementById("day-3-humidity");
 
-import * as dateFns from 'https://esm.run/date-fns';
-const { startOfTomorrow, addDays } = dateFns;
-
 // 2. Setup an event listener
 weatherSubmitButton.addEventListener('click', function (event) {
     // code that we want to run when the button is clicked...
@@ -61,9 +58,9 @@ function fetchWeather(location) {
 
 
             // Grab 
-            const day1 = allForecasts[startOfTomorrow()];
-            const day2 = allForecasts[addDays(startOfTomorrow(), 1)];
-            const day3 = allForecasts[addDays(startOfTomorrow(), 2)];
+            const day1 = allForecasts[moment().startOf("day").add(1, "days").toDate()];
+            const day2 = allForecasts[moment().startOf("day").add(2, 'days').toDate()];
+            const day3 = allForecasts[moment().startOf("day").add(3, "days").toDate()];
 
             day1Temp.innerHTML = day1.main.temp;
             day1Humidity.innerHTML = day1.main.humidity;
@@ -79,8 +76,6 @@ function fetchWeather(location) {
         });
     return "Weather info";
 }
-
-
 
 
 var cityNameHistory = []; // array
