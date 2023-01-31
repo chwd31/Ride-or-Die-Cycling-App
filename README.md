@@ -16,8 +16,6 @@ This website is a resource for frequent travelers who love to explore cities on 
 
 ## Table of Contents 
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Installation](#installation)
@@ -38,16 +36,16 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-Navigate to "Enter URL" to use the website.  No further installation is necessary.  
+Navigate to [Ride or Die Cycling App](https://chwd31.github.io/Ride-or-Die-Cycling-App/) to use the website.  No further installation is necessary.  
 
 
-## Usage
+## Usage.  
+  
+![Screenshot 2023-01-31 at 11 35 06 AM](https://user-images.githubusercontent.com/118683737/215838932-7a98da13-a77c-4260-9ef2-b5f7230cb8e1.png)  
 
 Enter your travel destination in the search box and submit your search.  Your search results will return the weather forecast and bike sharing locations in your destination city.
 
 The Bike FAQ will give the user helpful tips on biking safety in different scenerios.  Visit this page for additional information. 
-
-Below are some screenshots of what the site looks like. -insert screenshots-
 
 ## Credits
 
@@ -58,9 +56,10 @@ Cole [GitHub](https://github.com/colearrington98)
 Jemilah [GitHub](https://github.com/2x997JL)   
 Karim [GitHub](https://github.com/KarimB101)  
 
-Third-Party APIs used for the completion of the project:   
+### Third-Party APIs used for the completion of the project:   
   
-Open Weather API [link](https://openweathermap.org/api)  
+Open Weather API [link](https://openweathermap.org/api)   
+CityBikes API [link](http://api.citybik.es/v2/)
   
 
 ## License
