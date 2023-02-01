@@ -39,6 +39,12 @@ function fetchBikeSharingInformation(location) {
 
   bikeShareList.innerHTML = ""; // clear bike list
 
+  // if no data displays message shows on site
+if (bikeNetworksAtLocation.length == 0){
+  bikeShareList.innerHTML = "No Bike Data At This Location";
+  // bikeShareList.setAttribute('class', color)
+}
+
   // filling the bike list on the page...
   bikeNetworksAtLocation.forEach((network) => {
     // for each network, make an api call to get more details... (station info)
